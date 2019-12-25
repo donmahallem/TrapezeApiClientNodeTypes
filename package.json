@@ -1,6 +1,6 @@
 {
     "name": "@donmahallem/trapeze-api-client-types",
-    "version": "2.4.9",
+    "version": "1.0.0",
     "description": "Supporting type library for the trapeze api client",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
