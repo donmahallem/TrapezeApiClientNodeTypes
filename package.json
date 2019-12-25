@@ -21,7 +21,7 @@
         "prepublishOnly": "npm run build"
     },
     "dependencies": {
-        "@donmahallem/trapeze-api-types": "^1.0.0"
+        "@donmahallem/trapeze-api-types": "^1.7.0"
     },
     "devDependencies": {
         "@types/chai": "~4.2.7",
