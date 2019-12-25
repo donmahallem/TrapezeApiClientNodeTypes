@@ -12,7 +12,15 @@ env:
   - TEST_SUITE=build
   - TEST_SUITE=unit
   - TEST_SUITE=docs
-matrix:
+cache: npm
+before_script:
+- npm install -g npm-install-peers
+- npm-install-peers
+script:
+- npm run test:$TEST_SUITE
+after_success:
+- ./coveralls_upload.sh
+jobs:
   exclude:
     - node_js: "8"
       env: TEST_SUITE=lint
@@ -32,15 +40,6 @@ matrix:
       env: TEST_SUITE=docs
     - node_js: "10"
       env: TEST_SUITE=build
-cache: npm
-before_script:
-- npm install -g npm-install-peers
-- npm-install-peers
-script:
-- npm run test:$TEST_SUITE
-after_success:
-- ./coveralls_upload.sh
-jobs:
   include:
   - stage: npm release
     node_js: 'stable'
