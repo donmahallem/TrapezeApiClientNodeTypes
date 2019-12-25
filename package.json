@@ -1,7 +1,7 @@
 {
     "name": "@donmahallem/trapeze-api-client-types",
     "version": "2.4.9",
-    "description": "",
+    "description": "Supporting type library for the trapeze api client",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
     "private": false,
@@ -20,8 +20,8 @@
         "test:docs": "npm run docs",
         "prepublishOnly": "npm run build"
     },
-    "dependencies": {
-        "@donmahallem/trapeze-api-types": "^1.0.0"
+    "peerDependencies": {
+        "@donmahallem/trapeze-api-types": ">1.7.0"
     },
     "devDependencies": {
         "@types/chai": "~4.2.7",
