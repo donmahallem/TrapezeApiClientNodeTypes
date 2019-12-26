@@ -48,7 +48,7 @@ jobs:
     if: tag IS present
     deploy:
       provider: npm
-      cleanup: false
+      skip_cleanup: true
       email: $npm_email
       api_key: $npm_api_key
       on:
@@ -60,7 +60,7 @@ jobs:
     if: branch = master
     deploy:
       provider: pages
-      cleanup: false
+      skip_cleanup: true
       local_dir: docs
       token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
       keep_history: true
