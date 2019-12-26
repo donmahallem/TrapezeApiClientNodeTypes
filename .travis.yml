@@ -45,7 +45,7 @@ jobs:
   - stage: npm release
     node_js: 'stable'
     script: npm run build
-    #if: tag IS present
+    if: tag IS present
     deploy:
       provider: npm
       edge: true
@@ -53,7 +53,7 @@ jobs:
       email: $npm_email
       api_token: $npm_api_key
       on:
-        #tags: true
+        tags: true
         repo: donmahallem/TrapezeApiClientNodeTypes
   - stage: github pages release
     node_js: 'stable'
