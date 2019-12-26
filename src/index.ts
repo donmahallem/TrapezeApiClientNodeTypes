@@ -4,6 +4,6 @@
 
 import { IVehicleLocation } from "@donmahallem/trapeze-api-types";
 
-export type IVehicleLocationExtended = IVehicleLocation | {
+export type IVehicleLocationExtended = IVehicleLocation & {
     lastUpdate: number;
 };
