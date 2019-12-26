@@ -46,11 +46,12 @@ jobs:
     node_js: 'stable'
     script: npm run build
     if: tag IS present
+    edge: true
     deploy:
       provider: npm
-      skip_cleanup: true
+      cleanup: false
       email: $npm_email
-      api_key: $npm_api_key
+      api_token: $npm_api_key
       on:
         tags: true
         repo: donmahallem/TrapezeApiClientNodeTypes
