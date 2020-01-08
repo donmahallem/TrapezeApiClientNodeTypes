@@ -2,8 +2,8 @@
  * Source https://github.com/donmahallem/TrapezeApiClientNodeTypes
  */
 
-import { IVehicleLocation } from "@donmahallem/trapeze-api-types";
+import { VehicleLocations } from "@donmahallem/trapeze-api-types";
 
-export type IVehicleLocationExtended = IVehicleLocation & {
+export type IVehicleLocationExtended = VehicleLocations & {
     lastUpdate: number;
 };
